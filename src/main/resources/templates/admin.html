@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>求人を出す</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f8f7;
+    }
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    .form-container {
+      background-color: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .form-container h2 {
+      color: #3e9a52;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 90%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    .form-group textarea {
+      height: 100px;
+    }
+    .btn-submit {
+      background-color: #ff8c00;
+      color: white;
+      font-size: 16px;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h2>求人情報を入力</h2>
+
+      <div class="form-group">
+        <label for="company-name">会社名</label>
+        <input type="text" id="company-name" placeholder="会社名を入力">
+      </div>
+
+      <div class="form-group">
+        <label for="job-title">職種</label>
+        <input type="text" id="job-title" placeholder="職種を入力">
+      </div>
+
+      <div class="form-group">
+        <label for="job-location">勤務地</label>
+        <input type="text" id="job-location" placeholder="勤務地を入力">
+      </div>
+
+      <div class="form-group">
+        <label for="working-hours">勤務時間</label>
+        <input type="text" id="working-hours" placeholder="勤務時間を入力">
+      </div>
+
+      <div class="form-group">
+        <label for="salary">給与</label>
+        <input type="text" id="salary" placeholder="給与を入力">
+      </div>
+
+      <div class="form-group">
+        <label for="job-description">仕事内容</label>
+        <textarea id="job-description" placeholder="仕事内容を入力"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="contact-info">連絡先</label>
+        <input type="text" id="contact-info" placeholder="連絡先情報を入力">
+      </div>
+
+      <button class="btn-submit">求人を投稿する</button>
+    </div>
+  </div>
+</body>
+</html>

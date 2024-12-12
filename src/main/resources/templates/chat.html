@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>チャット</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f8f7;
+    }
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    .chat-box {
+      background-color: #fff;
+      padding: 16px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .chat-box .message {
+      margin-bottom: 12px;
+    }
+    .chat-box .message.user {
+      color: #3e9a52;
+    }
+    .chat-box .message.company {
+      color: #ff8c00;
+    }
+    .message-input {
+      display: flex;
+      margin-top: 12px;
+    }
+    .message-input input {
+      flex: 1;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    .message-input button {
+      padding: 12px;
+      background-color: #ff8c00;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>企業とのチャット</h2>
+
+    <div class="chat-box">
+      <div class="message user">
+        <strong>ユーザー:</strong> こんにちは、この求人について質問があります。
+      </div>
+      <div class="message company">
+        <strong>企業:</strong> こんにちは、どういった質問でしょうか？
+      </div>
+    </div>
+
+    <div class="message-input">
+      <input type="text" placeholder="メッセージを入力">
+      <button>送信</button>
+    </div>
+  </div>
+</body>
+</html>

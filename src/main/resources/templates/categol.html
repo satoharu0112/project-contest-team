@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>求人一覧</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    .search-bar {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .search-bar input {
+      width: 75%;
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    .category-filter {
+      width: 20%;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    .job-item {
+      background-color: #fff;
+      padding: 16px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .job-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .job-content h3 {
+      margin: 8px 0;
+      color: #007bff;
+      font-size: 16px;
+    }
+    .job-content p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: #555;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 12px;
+    }
+    .btn {
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+    }
+    .btn-detail {
+      background-color: #007bff;
+    }
+    .btn-apply {
+      background-color: #28a745;
+    }
+  </style>
+  <!-- vue.js-->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="container">
+    <h2>求人一覧</h2>
+
+    <!-- 検索バー -->
+    <div class="search-bar">
+      <input type="text" placeholder="キーワード検索">
+      <select class="category-filter">
+        <option value="">カテゴリー</option>
+        <option value="retail">小売</option>
+        <option value="food">飲食</option>
+        <option value="service">サービス</option>
+      </select>
+    </div>
+
+    <!-- 求人1 -->
+    <div class="job-item">
+      <img src="https://via.placeholder.com/420x240" alt="求人画像">
+      <div class="job-content">
+        <h3>ローソン札幌平和通七丁目店</h3>
+        <p>勤務時間: 9:00〜13:00</p>
+        <p>仕事内容: レジ対応、清掃業務</p>
+      </div>
+      <div class="buttons">
+        <div class="btn btn-detail">詳細</div>
+        <div class="btn btn-apply">応募</div>
+      </div>
+    </div>
+
+    <!-- 求人2 -->
+    <div class="job-item">
+      <img src="https://via.placeholder.com/420x240" alt="求人画像">
+      <div class="job-content">
+        <h3>セブンイレブン札幌北24条店</h3>
+        <p>勤務時間: 10:00〜14:00</p>
+        <p>仕事内容: 商品補充、接客</p>
+      </div>
+      <div class="buttons">
+        <div class="btn btn-detail">詳細</div>
+        <div class="btn btn-apply">応募</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // service worker
+    if ('serviceWorler' in navigator) {
+      navigator.serviceWorker.register('serviceWorker.js').then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }).catch(function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    }
+  </script>
+</body>
+</html>

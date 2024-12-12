@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>求人リスト</title>
+    <style>
+      /* 全体のスタイル */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        max-width: 420px;
+        margin: 0 auto;
+        padding: 16px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      .header h1 {
+        font-size: 20px;
+        margin: 0;
+        color: #333;
+      }
+
+      .job-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .job-item {
+        background-color: #fff;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .job-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .job-content {
+        padding: 12px;
+      }
+
+      .job-content h2 {
+        font-size: 16px;
+        margin: 0 0 8px;
+        color: #007bff;
+      }
+
+      .job-content p {
+        margin: 4px 0;
+        font-size: 14px;
+        color: #555;
+      }
+
+      .job-content .price {
+        font-weight: bold;
+        color: #ff6600;
+      }
+
+      .button-container {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #f4f4f4;
+      }
+
+      .button-container a {
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+
+      .button-container a:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>求人リスト</h1>
+      </div>
+
+      <ul class="job-list">
+        <!-- 求人項目1 -->
+        <li class="job-item">
+          <img src="https://via.placeholder.com/420x240" alt="ローソン札幌平和通七丁目店" />
+          <div class="job-content">
+            <h2>ローソン札幌平和通七丁目店</h2>
+            <p>勤務時間: 6:00〜9:00</p>
+            <p>仕事内容: 商品補充、レジ対応</p>
+            <p class="price">報酬: ¥3,530</p>
+          </div>
+          <div class="button-container">
+            <a href="#">詳細を見る</a>
+          </div>
+        </li>
+
+        <!-- 求人項目2 -->
+        <li class="job-item">
+          <img src="https://via.placeholder.com/420x240" alt="セブンイレブン札幌北24条店" />
+          <div class="job-content">
+            <h2>セブンイレブン札幌北24条店</h2>
+            <p>勤務時間: 9:00〜13:00</p>
+            <p>仕事内容: レジ対応、清掃業務</p>
+            <p class="price">報酬: ¥4,000</p>
+          </div>
+          <div class="button-container">
+            <a href="#">詳細を見る</a>
+          </div>
+        </li>
+
+        <!-- 求人項目3 -->
+        <li class="job-item">
+          <img src="https://via.placeholder.com/420x240" alt="ファミリーマート札幌駅前店" />
+          <div class="job-content">
+            <h2>ファミリーマート札幌駅前店</h2>
+            <p>勤務時間: 13:00〜18:00</p>
+            <p>仕事内容: 商品陳列、接客</p>
+            <p class="price">報酬: ¥5,000</p>
+          </div>
+          <div class="button-container">
+            <a href="#">詳細を見る</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

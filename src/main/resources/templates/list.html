@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日にちごとの求人リスト</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .header h1 {
+      font-size: 20px;
+      margin: 0;
+      color: #333;
+    }
+
+    .date-selector {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 16px;
+    }
+
+    .date-selector button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .date-selector button.active {
+      background-color: #0056b3;
+    }
+
+    .job-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .job-item {
+      background-color: #fff;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .job-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .job-content {
+      padding: 12px;
+    }
+
+    .job-content h2 {
+      font-size: 16px;
+      margin: 0 0 8px;
+      color: #007bff;
+    }
+
+    .job-content p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .job-content .price {
+      font-weight: bold;
+      color: #ff6600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>日にちごとの求人リスト</h1>
+    </div>
+
+    <!-- 日付セレクター -->
+    <div class="date-selector">
+      <button class="active" data-date="2024-12-10">12/10</button>
+      <button data-date="2024-12-11">12/11</button>
+      <button data-date="2024-12-12">12/12</button>
+    </div>
+
+    <!-- 求人リスト -->
+    <ul id="job-list" class="job-list">
+      <!-- JavaScriptで内容を挿入 -->
+    </ul>
+  </div>
+
+  <script>
+    // 求人データ
+    const jobs = {
+      "2024-12-10": [
+        {
+          title: "ローソン札幌平和通七丁目店",
+          time: "6:00〜9:00",
+          description: "商品補充、レジ対応",
+          price: "¥3,530",
+          image: "https://via.placeholder.com/420x240"
+        },
+        {
+          title: "セブンイレブン札幌北24条店",
+          time: "9:00〜13:00",
+          description: "レジ対応、清掃業務",
+          price: "¥4,000",
+          image: "https://via.placeholder.com/420x240"
+        }
+      ],
+      "2024-12-11": [
+        {
+          title: "ファミリーマート札幌駅前店",
+          time: "13:00〜18:00",
+          description: "商品陳列、接客",
+          price: "¥5,000",
+          image: "https://via.placeholder.com/420x240"
+        }
+      ],
+      "2024-12-12": [
+        {
+          title: "ミニストップ札幌大通店",
+          time: "7:00〜11:00",
+          description: "レジ対応、清掃業務",
+          price: "¥3,800",
+          image: "https://via.placeholder.com/420x240"
+        },
+        {
+          title: "ローソン札幌南三条西店",
+          time: "16:00〜20:00",
+          description: "商品補充、レジ対応",
+          price: "¥4,500",
+          image: "https://via.placeholder.com/420x240"
+        }
+      ]
+    };
+
+    // 求人リストを更新する関数
+    const jobList = document.getElementById("job-list");
+
+    function updateJobList(date) {
+      // 求人リストをクリア
+      jobList.innerHTML = "";
+
+      // 選択された日の求人を取得
+      const selectedJobs = jobs[date] || [];
+
+      // 求人情報を挿入
+      selectedJobs.forEach(job => {
+        const jobItem = `
+          <li class="job-item">
+            <img src="${job.image}" alt="${job.title}">
+            <div class="job-content">
+              <h2>${job.title}</h2>
+              <p>勤務時間: ${job.time}</p>
+              <p>仕事内容: ${job.description}</p>
+              <p class="price">報酬: ${job.price}</p>
+            </div>
+          </li>
+        `;
+        jobList.innerHTML += jobItem;
+      });
+    }
+
+    // 初期表示 (最初の日付の求人)
+    updateJobList("2024-12-10");
+
+    // 日付ボタンのクリックイベント
+    document.querySelectorAll(".date-selector button").forEach(button => {
+      button.addEventListener("click", () => {
+        // ボタンのアクティブ状態を切り替え
+        document.querySelector(".date-selector button.active").classList.remove("active");
+        button.classList.add("active");
+
+        // 求人リストを更新
+        const selectedDate = button.getAttribute("data-date");
+        updateJobList(selectedDate);
+      });
+    });
+  </script>
+</body>
+</html>

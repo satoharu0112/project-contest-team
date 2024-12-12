@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>応募ステータス</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f8f7;
+    }
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    .status-card {
+      background-color: #fff;
+      padding: 16px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .status-card h3 {
+      color: #3e9a52;
+    }
+    .status-card p {
+      font-size: 14px;
+      color: #555;
+    }
+    .status-card .status {
+      font-size: 16px;
+      padding: 6px;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 12px;
+    }
+    .status-card .status.pending {
+      background-color: #ff8c00;
+      color: white;
+    }
+    .status-card .status.interview {
+      background-color: #3e9a52;
+      color: white;
+    }
+    .status-card .status.rejected {
+      background-color: #bdbdbd;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>応募ステータス</h2>
+
+    <div class="status-card">
+      <h3>ローソン札幌平和通七丁目店</h3>
+      <p>応募日: 2024年12月5日</p>
+      <p>ポジション: 店舗スタッフ</p>
+      <div class="status pending">選考中</div>
+    </div>
+
+    <div class="status-card">
+      <h3>セブンイレブン札幌北24条店</h3>
+      <p>応募日: 2024年12月3日</p>
+      <p>ポジション: 商品補充スタッフ</p>
+      <div class="status interview">面接予定</div>
+    </div>
+
+    <div class="status-card">
+      <h3>ファミリーマート札幌中央店</h3>
+      <p>応募日: 2024年12月1日</p>
+      <p>ポジション: 商品補充スタッフ</p>
+      <div class="status rejected">不採用</div>
+    </div>
+  </div>
+</body>
+</html>
