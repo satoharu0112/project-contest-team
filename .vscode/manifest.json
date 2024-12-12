@@ -1,0 +1,13 @@
+{
+  "short_name": "PWA",
+  "name": "PWA Snow app",
+  "display": "standalone",
+  "start_url": "categol.html",
+  "icons": [
+    {
+      "src": "images/snowIcon.jpeg",
+      "sixes": "192x192",
+      "type": "images/jpeg"
+    }
+  ]
+}
